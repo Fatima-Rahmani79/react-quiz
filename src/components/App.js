@@ -1,4 +1,5 @@
 import { useEffect, useReducer } from "react";
+import quizData from "../data/questions.json";
 import Header from "./Header";
 import Main from "./Main";
 import Loader from "./Loader";
@@ -99,10 +100,7 @@ export default function App() {
   );
 
   useEffect(() => {
-    fetch("http://localhost:8000/questions")
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch((err) => dispatch({ type: "dataFailed" }));
+    dispatch({ type: "dataReceived", payload: quizData.questions });
   }, []);
   return (
     <div className="app">

@@ -23,7 +23,7 @@ A small React quiz application that loads questions from a local JSON server, tr
 - `src/components` – UI components for the quiz flow
 - `src/index.js` – app entry point
 - `src/index.css` – styling
-- `data/questions.json` – quiz questions and answers
+- `src/data/questions.json` – quiz questions and answers
 
 ## Getting Started
 
@@ -33,19 +33,13 @@ A small React quiz application that loads questions from a local JSON server, tr
    npm install
    ```
 
-2. Start the JSON server for the quiz data:
-
-   ```bash
-   npm run server
-   ```
-
-3. Start the React app in a separate terminal:
+2. Start the React app:
 
    ```bash
    npm start
    ```
 
-4. Open the app in your browser at:
+3. Open the app in your browser at:
 
    ```text
    http://localhost:3000
@@ -54,10 +48,13 @@ A small React quiz application that loads questions from a local JSON server, tr
 ## Available Scripts
 
 - `npm start` – runs the React app
-- `npm run server` – runs the local JSON API on port 8000
+- `npm run server` – optionally runs the local JSON API on port 8000
 - `npm run build` – creates a production build
 - `npm test` – runs the test suite
 
-## Notes
+## Deployment
 
-This app fetches questions from `http://localhost:8000/questions`, so the JSON server must be running before launching the quiz.
+The quiz data is bundled with the React app, so no separate API server is needed in production. Deploy to a static hosting provider such as Netlify or Vercel with:
+
+- Build command: `npm run build`
+- Publish/output directory: `build`
