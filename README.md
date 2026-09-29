@@ -2,6 +2,8 @@
 
 A small React quiz application that loads questions from a local JSON server, tracks the user's progress, calculates points, and keeps a high score during the session.
 
+**Live demo:** [react-quiz-brown-phi.vercel.app](https://react-quiz-brown-phi.vercel.app/)
+
 ## Features
 
 - Start screen with the number of questions
